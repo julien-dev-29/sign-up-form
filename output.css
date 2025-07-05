@@ -1,0 +1,136 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: norse-bold;
+  src: url(assets/fonts/Norsebold.otf);
+}
+body {
+  height: 100vh;
+  background-color: #201320;
+  font-family: sans-serif;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+}
+.container .logo-container {
+  background: center/cover no-repeat url(assets/images/city.jpg);
+  min-width: 680px;
+}
+.container .logo-container .logo {
+  margin-top: 160px;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .logo-container .logo img {
+  height: 140px;
+  margin: 15px 0;
+}
+.container .logo-container .logo .odin {
+  color: #eeeef0;
+  font-family: norse-bold;
+  font-size: 6rem;
+}
+
+.form {
+  background-color: #fdfcfd;
+  flex: 1;
+  color: #211f26;
+  display: flex;
+  flex-direction: column;
+}
+.form-header {
+  padding: 65px 45px;
+  flex: 1;
+  background-color: #f2eff3;
+  color: #65636d;
+  font-size: 1.5rem;
+  font-weight: bold;
+  z-index: 10;
+}
+.form-main {
+  z-index: 2;
+  padding: 35px 45px;
+  flex: 1;
+  font-size: 1rem;
+  box-shadow: 15px 0 15px 3px rgba(0, 0, 0, 0.2);
+}
+.form-main form {
+  margin-top: 16px;
+}
+.form-footer {
+  z-index: 1;
+  padding: 25px 45px;
+  flex: 1;
+  background-color: #f2eff3;
+  color: #65636d;
+}
+.form-footer button {
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  background: #ab4aba;
+  color: white;
+  padding: 16px 55px;
+  border-radius: 5px;
+}
+.form-footer button:focus {
+  outline: 2px solid #cf91d8;
+}
+.form-footer button:hover {
+  background-color: #b658c4;
+}
+.form-footer p {
+  margin-top: 25px;
+}
+.form-footer a {
+  text-decoration: none;
+  color: #ab4aba;
+  font-weight: bolder;
+}
+.form-footer a:hover {
+  text-decoration: underline;
+}
+.form-footer a:focus {
+  outline: 2px solid #cf91d8;
+}
+
+label {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+input {
+  width: 260px;
+  border: 1px solid #dbd8e0;
+  border-radius: 5px;
+  margin-right: 15px;
+  padding: 8px 10px;
+  margin-bottom: 5px;
+}
+
+input:focus {
+  outline: 2px solid #cf91d8;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.form-item {
+  margin-top: 18px;
+  display: flex;
+}
+.form-item div {
+  display: flex;
+  flex-direction: column;
+  margin-right: 70px;
+}
+
+/*# sourceMappingURL=output.css.map */

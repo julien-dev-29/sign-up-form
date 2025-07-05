@@ -1,0 +1,145 @@
+$main-app-bg: #201320;
+$text-secondary: #b5b2bc;
+$text-secondary-light: #65636d;
+$text-secondary-light-high-contrast: #211f26;
+$text-primary: #eeeef0;
+$form-bg: #fdfcfd;
+$secondary-bg: #f2eff3;
+$border-grey: #dbd8e0;
+$border-accent: #cf91d8;
+$bg-accent: #ab4aba;
+$bg-accent-hover: #b658c4;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: norse-bold;
+  src: url(assets/fonts/Norsebold.otf);
+}
+
+body {
+  height: 100vh;
+  background-color: $main-app-bg;
+  font-family: sans-serif;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  .logo-container {
+    background: center / cover no-repeat url(assets/images/city.jpg);
+    min-width: 680px;
+    .logo {
+      margin-top: 160px;
+      background: rgb(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        height: 140px;
+        margin: 15px 0;
+      }
+      .odin {
+        color: $text-primary;
+        font-family: norse-bold;
+        font-size: 6rem;
+      }
+    }
+  }
+}
+
+.form {
+  background-color: $form-bg;
+  flex: 1;
+  color: $text-secondary-light-high-contrast;
+  display: flex;
+  flex-direction: column;
+  &-header {
+    padding: 65px 45px;
+    flex: 1;
+    background-color: $secondary-bg;
+    color: $text-secondary-light;
+    font-size: 1.5rem;
+    font-weight: bold;
+    z-index: 10;
+  }
+  &-main {
+    z-index: 2;
+    padding: 35px 45px;
+    flex: 1;
+    font-size: 1rem;
+    box-shadow: 15px 0 15px 3px rgba(0, 0, 0, 0.2);
+    form {
+      margin-top: 16px;
+    }
+  }
+  &-footer {
+    z-index: 1;
+    padding: 25px 45px;
+    flex: 1;
+    background-color: $secondary-bg;
+    color: $text-secondary-light;
+    button {
+      font-size: 1rem;
+      font-weight: bold;
+      border: none;
+      background: $bg-accent;
+      color: white;
+      padding: 16px 55px;
+      border-radius: 5px;
+      &:focus {
+        outline: 2px solid $border-accent;
+      }
+      &:hover {
+        background-color: $bg-accent-hover;
+      }
+    }
+    p {
+      margin-top: 25px;
+    }
+    a {
+      text-decoration: none;
+      color: #ab4aba;
+      font-weight: bolder;
+      &:hover {
+        text-decoration: underline;
+      }
+      &:focus {
+        outline: 2px solid $border-accent;
+      }
+    }
+  }
+}
+label {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+input {
+  width: 260px;
+  border: 1px solid $border-grey;
+  border-radius: 5px;
+  margin-right: 15px;
+  padding: 8px 10px;
+  margin-bottom: 5px;
+}
+
+input:focus {
+  outline: 2px solid $border-accent;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.form-item {
+  margin-top: 18px;
+  display: flex;
+  & div {
+    display: flex;
+    flex-direction: column;
+    margin-right: 70px;
+  }
+}

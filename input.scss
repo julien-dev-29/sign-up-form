@@ -61,7 +61,7 @@ body {
   display: flex;
   flex-direction: column;
   &-header {
-    padding: 65px 45px;
+    padding: 95px 45px 25px 45px;
     flex: 1;
     background-color: $secondary-bg;
     color: $text-secondary-light;
@@ -130,8 +130,13 @@ input {
 }
 
 input:focus {
-  outline: 2px solid $border-accent;
+  outline: none;
+  border: 2px solid $border-accent;
   box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+input[type="password"]:invalid {
+  border: 2px solid #E54666;
 }
 
 .form-item {

@@ -139,6 +139,10 @@ input[type="password"]:invalid {
   border: 2px solid #E54666;
 }
 
+input[type="password"]:valid {
+  border: 2px solid #30A46C;
+}
+
 .form-item {
   margin-top: 18px;
   display: flex;
